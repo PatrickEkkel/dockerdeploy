@@ -9,7 +9,7 @@ CONTAINER_ID=$(docker run -d -p $PORT:8090 -i -t -e JAVA_HOME=/usr/lib/jvm/java-
 echo "started container with ID" $CONTAINER_ID
 # run commands to get the container ready for usage
 
-docker exec $CONTAINER_ID /root/docker_startup_services.sh
-docker exec $CONTAINER_ID /root/build_and_deploy_top.sh $BRANCH_TO_BUILD
+#docker exec $CONTAINER_ID /root/docker_startup_services.sh
+docker exec $CONTAINER_ID /root/build_and_deploy_backends.sh $BRANCH_TO_BUILD
 #docker stop $CONTAINER_ID
  
